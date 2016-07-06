@@ -1,0 +1,6 @@
+[user]
+	name = Denis Aoki
+	email = dnsaoki@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
