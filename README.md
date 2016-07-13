@@ -8,6 +8,13 @@ Configuração Fish Shell:
 	- brew install fish
 - Instalar Oh My Fish
 	- 'https://github.com/oh-my-fish/oh-my-fish'
+- Plugins instalados:
+	- virtualfish
+		- $ pip install virtualfish
+		- $ omf install virtualfish
+	- bang-bang (style history)
+		- omf install bang-bang
+
 - Configurar para ser o shell padrão:
 	- which fish
 	- adicionar o 'path' do fish no arquivo '/etc/shells'
