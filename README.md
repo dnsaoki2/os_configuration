@@ -1,23 +1,32 @@
-Instalação bash:
-===========
-- copiar os arquivos '.bash_profile', '.gitconfig' e 'gitignore_global' para ~
+Configuração bash shell:
+========================
+- cp ./.bash_profile $HOME
 
-Fish Shell:
-===========
-- mover arquivo de configuração
-	- mv config.fish ~/.config/fish/
+Configuração Fish Shell:
+========================
+- Instalar:
+	- brew install fish
+- Instalar Oh My Fish
+	- 'https://github.com/oh-my-fish/oh-my-fish'
+- Configurar para ser o shell padrão:
+	- which fish
+	- adicionar o 'path' do fish no arquivo '/etc/shells'
+	- chsh -s 'path'
+		sendo 'path' o caminho retornado pelo which
+- personalizacão do fish:
+	- copiar arquivo de configuração:
+		- cp './fish/.config/fish/config.fish' '~/.config/fish'
+		- Obs.: 
+			- virtualfish com compat_aliases e auto_activation
+	- copiar funçoes personalizadas:
+		- cp -r './fish/.config/fish/functions' '~/.config/fish'
+		- Obs.:
+			- `s $arg`: atalho para abrir o sublime
+			- `gs`: atalho para 'git status'
+			- fish_prompt.fish modificado para mostrar o virtuaenv ativo
 
-Funcões definidas do Fish:
-==========================
-Copiar os arquivos da pasta 'functions' para '~/.config/fish/functions'
-- 'functions/fish_prompt.fish'
-	- auto virtualenv (`http://virtualfish.readthedocs.io/en/latest/install.html#customizing-your-fish-prompt`)
-- 'functions/gs.fish'
-	- gs: git status
-- 'functions/s.fish'
-	- s $arg: open sublime
-
-Vim conf:
-=========
-- cp .vimrc ~
+Configuração do vim:
+====================
+Configuração do editor do vim para as linguages: html, js, go, python, c
+- cp './vim/.vimrc' $HOME
 - vim +NeoBundleInstall +qall
