@@ -8,3 +8,8 @@ Fish Shell:
 	- mv config.fish ~/.config/fish/
 - adicionar função para mostrar o virtuaenv ativo
 	- `http://virtualfish.readthedocs.io/en/latest/install.html#customizing-your-fish-prompt` 
+
+Vim conf:
+=========
+- cp .vimrc ~
+- vim +NeoBundleInstall +qall
