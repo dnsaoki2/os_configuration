@@ -9,3 +9,7 @@ set -q XDG_DATA_HOME
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
 eval (python -m virtualfish compat_aliases auto_activation)
+eval (export GOPATH=$HOME/go)
+eval (export GO15VENDOREXPERIMENT=1)
+# eval (export PATH=$PATH:$GOPATH/bin)
+set PATH $PATH $GOPATH/bin
