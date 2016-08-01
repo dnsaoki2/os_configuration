@@ -13,3 +13,5 @@ eval (export GOPATH=$HOME/go)
 eval (export GO15VENDOREXPERIMENT=1)
 # eval (export PATH=$PATH:$GOPATH/bin)
 set PATH $PATH $GOPATH/bin
+eval (export LC_ALL=en_US.UTF-8)
+eval (export LANG=en_US.UTF-8)
