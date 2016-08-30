@@ -255,6 +255,7 @@ let g:NERDTreeWinSize = 35
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <F3> :NERDTreeToggle<CR>
+noremap <C-n> :NERDTreeTabsOpen><CR>
 
 " grep.vim
 nnoremap <silent> <leader>f :Rgrep<CR>
@@ -560,3 +561,13 @@ endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" Send more characters for redraws
+set ttyfast
+"
+" " Enable mouse use in all modes
+set mouse=a
+"
+" Set this to the name of your terminal that supports mouse codes.
+" " Must be one of: xterm, xterm2, netterm, dec, jsbterm, pterm
+set ttymouse=xterm2"
+" "
