@@ -31,11 +31,35 @@ Configuração Fish Shell:
 		- Obs.: 
 			- virtualfish com compat_aliases e auto_activation
 	- alias personalizados:
-		- git status: 
-			- alias gs "git status"
+		- git:
+			- ga: git add .
+			- gs: git status
+			- gp: git pull
+		- diretorios:
+			- personal: cd $HOME/workspace/personal
+			- work: cd $HOME/workspace/work
 
 Configuração do vim:
 ====================
-Configuração do editor do vim para as linguages: html, js, go, python, c
-- cp './vim/.vimrc' $HOME
-- vim +NeoBundleInstall +qall
+- Configuração do editor do vim para as linguages: html, js, go, python, c
+	- cp './vim/.vimrc' $HOME
+	- vim +NeoBundleInstall +qall
+
+- Teclas:
+	- NeerdTree:
+		- <F2>: NERDTreeFind
+		- <F3>: NERDTreeToggle
+		- <C-n>: NERDTreeTabsOpen
+	- Grep:
+		- <leader>f: procurar
+	- Split:
+		- <leader>h: split na horizontal
+		- <leader>v: split na vertical
+	- Buffer:
+		- <leader>z || <leader>x: navegação no buffer
+		- <leader>c: fechar buffer
+		- <leader>b: procurar no buffer
+	- TagBar
+		- <F4>: Abrir TagBar
+	- Highlight
+		- <leader>space: Desabilitar highlith da busca

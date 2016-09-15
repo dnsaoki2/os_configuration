@@ -11,7 +11,7 @@ endif
 let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
 
 let g:vim_bootstrap_langs = "javascript,python,c,html,go"
-let g:vim_bootstrap_editor = "vim"				" nvim or vim
+let g:vim_bootstrap_editor = "vim"        " nvim or vim
 
 if !filereadable(neobundle_readme)
   echo "Installing NeoBundle..."
@@ -455,15 +455,16 @@ augroup vimrc-python
 augroup END
 
 " jedi-vim
-let g:jedi#popup_on_dot = 0
+let g:jedi#use_splits_not_buffers = "right"
 let g:jedi#goto_assignments_command = "<leader>g"
 let g:jedi#goto_definitions_command = "<leader>d"
 let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "<leader>r"
 let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
+let g:jedi#completions_command = "<C-k>"
 let g:jedi#smart_auto_mappings = 0
+let g:jedi#completions_enabled = 1
 
 " syntastic
 let g:syntastic_python_checkers=['python', 'flake8']
