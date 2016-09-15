@@ -15,3 +15,8 @@ eval (export GO15VENDOREXPERIMENT=1)
 set PATH $PATH $GOPATH/bin
 eval (export LC_ALL=en_US.UTF-8)
 eval (export LANG=en_US.UTF-8)
+# alias
+alias work "cd $HOME/workspace/work"
+alias personal "cd $HOME/workspace/personal"
+alias gs "git status"
+alias gd "git add ."
