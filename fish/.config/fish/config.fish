@@ -21,3 +21,5 @@ alias personal "cd $HOME/workspace/personal"
 alias gs "git status"
 alias ga "git add ."
 alias gp "git pull"
+
+
