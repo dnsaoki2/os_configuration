@@ -14,10 +14,23 @@ Configuração Fish Shell:
 	- virtualfish
 		- $ pip install virtualfish
 		- $ omf install virtualfish
+		- Uso:
+			- vf connect
 	- bang-bang (style history)
 		- omf install bang-bang
+		- Uso:
+			- !!: repete o comando anterior
+			- !@: repete os argumentos do comando anterior
 	- theme fishbone
 		- omf install theme-fishbone
+	- plugin tab
+		- omf install tab
+		- Uso:
+			- tab [dir]/[command]/[--split/-s]
+	- sudope
+		- omf install sudope
+		- Uso:
+			- ctrl + s
 
 - Configurar para ser o shell padrão:
 	- which fish

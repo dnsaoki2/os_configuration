@@ -57,6 +57,8 @@ NeoBundle 'Shougo/vimproc.vim', {
       \     'unix' : 'make -f make_unix.mak',
       \    },
       \ }
+NeoBundle 'L9'
+NeoBundle 'FuzzyFinder'
 
 "" Vim-Session
 NeoBundle 'xolox/vim-misc'
@@ -455,7 +457,7 @@ augroup vimrc-python
 augroup END
 
 " jedi-vim
-let g:jedi#use_splits_not_buffers = "right"
+"let g:jedi#use_splits_not_buffers = "winwidth"
 let g:jedi#goto_assignments_command = "<leader>g"
 let g:jedi#goto_definitions_command = "<leader>d"
 let g:jedi#documentation_command = "K"
