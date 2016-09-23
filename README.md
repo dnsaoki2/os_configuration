@@ -63,16 +63,19 @@ Configuração do vim:
 		- <F2>: NERDTreeFind
 		- <F3>: NERDTreeToggle
 		- <C-n>: NERDTreeTabsOpen
+	- Neerd commenter:
+		- \<leader\>cc: Comentar bloco
+		- \<leader\>cu: Descomentar bloco
 	- Grep:
-		- <leader>f: procurar
+		- \<leader\>f: procurar
 	- Split:
-		- <leader>h: split na horizontal
-		- <leader>v: split na vertical
+		- \<leader\>h: split na horizontal
+		- \<leader\>v: split na vertical
 	- Buffer:
-		- <leader>z || <leader>x: navegação no buffer
-		- <leader>c: fechar buffer
-		- <leader>b: procurar no buffer
+		- \<leader\>z || <leader>x: navegação no buffer
+		- \<leader\>c: fechar buffer
+		- \<leader\>b: procurar no buffer
 	- TagBar
-		- <F4>: Abrir TagBar
+		- \<F4\>: Abrir TagBar
 	- Highlight
-		- <leader>space: Desabilitar highlith da busca
+		- \<leader\>space: Desabilitar highlith da busca
