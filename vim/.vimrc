@@ -33,6 +33,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "*****************************************************************************
 "" NeoBundle install packages
 "*****************************************************************************
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'alvan/vim-closetag'
+NeoBundle 'gregsexton/matchtag'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'jistr/vim-nerdtree-tabs.git'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -290,7 +293,7 @@ if !exists('*s:setupWrapping')
   function s:setupWrapping()
     set wrap
     set wm=2
-    set textwidth=79
+    set textwidth=120
   endfunction
 endif
 
@@ -458,7 +461,7 @@ noremap ,o :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=lin
 " vim-python
 augroup vimrc-python
   autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=120
       \ formatoptions+=croq softtabstop=4 smartindent
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
@@ -476,7 +479,7 @@ let g:jedi#smart_auto_mappings = 0
 let g:jedi#completions_enabled = 1
 
 " syntastic
-let g:syntastic_python_checkers=['python', 'flake8']
+" let g:syntastic_python_checkers=['python', 'flake8']
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
@@ -581,3 +584,6 @@ set mouse=a
 " " Must be one of: xterm, xterm2, netterm, dec, jsbterm, pterm
 set ttymouse=xterm2"
 " "
+
+let g:jsx_ext_required = 0
+"
