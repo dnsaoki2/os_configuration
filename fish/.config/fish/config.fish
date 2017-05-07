@@ -8,18 +8,25 @@ set -q XDG_DATA_HOME
 
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
-eval (python -m virtualfish compat_aliases auto_activation)
+
+# Golang configuration
 eval (export GOPATH=$HOME/go)
 eval (export GO15VENDOREXPERIMENT=1)
-# eval (export PATH=$PATH:$GOPATH/bin)
 set PATH $PATH $GOPATH/bin
-eval (export LC_ALL=en_US.UTF-8)
-eval (export LANG=en_US.UTF-8)
-# alias
-alias work "cd $HOME/workspace/work"
+
+# Alias dir
 alias personal "cd $HOME/workspace/personal"
+
+# Alias git
 alias gs "git status"
-alias ga "git add ."
 alias gp "git pull"
+alias gc "git checkout"
+alias gl "git log"
 
+# Alias editors
+alias pycharm "open -a /Applications/Pycharm.app"
 
+# Start pyenv
+set -gx PYENV_ROOT $HOME/.pyenv
+set -gx PATH $PYENV_ROOT/shims $PYENV_ROOT/bin $PATH
+pyenv rehash

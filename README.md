@@ -11,11 +11,6 @@ Configuração Fish Shell:
 	- 'https://github.com/oh-my-fish/oh-my-fish'
 
 - Plugins instalados:
-	- virtualfish
-		- $ pip install virtualfish
-		- $ omf install virtualfish
-		- Uso:
-			- vf connect
 	- bang-bang (style history)
 		- omf install bang-bang
 		- Uso:
@@ -41,8 +36,7 @@ Configuração Fish Shell:
 - personalizacão do fish:
 	- copiar arquivo de configuração:
 		- cp './fish/.config/fish/config.fish' '~/.config/fish'
-		- Obs.: 
-			- virtualfish com compat_aliases e auto_activation
+
 	- alias personalizados:
 		- git:
 			- ga: git add .
