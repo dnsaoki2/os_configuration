@@ -36,7 +36,7 @@ Configuração Fish Shell:
 - personalizacão do fish:
 	- copiar arquivo de configuração:
 		- cp './fish/.config/fish/config.fish' '~/.config/fish'
-
+		- cp './fish/theme/fishbone/fish_right_prompt.fish' './.local/share/omf/themes/fishbone/fish_right_prompt.fish'
 	- alias personalizados:
 		- git:
 			- ga: git add .
