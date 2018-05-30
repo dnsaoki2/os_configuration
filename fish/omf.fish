@@ -41,8 +41,6 @@ alias code 'open -a /Applications/Visual\ Studio\ Code.app'
 
 set -gx PROJECT_PATHS '/Users/denis.aoki/workspace/personal/scripts/structure;/Users/denis.aoki/workspace/personal/scripts/new_structure'
 
-alias store "store.sh"
-
 function mcd
 	set --local response (run mcd $argv)
 	set --local number_of_paths (echo $response | tr " " "\n" | wc -l)
@@ -55,6 +53,8 @@ function mcd
 		echo "Nenhum caminho encontrado"
 	end
 end
+
+set -gx LSCOLORS gxfxcxdxbxegedabagacad
 
 # alias s 'vim (fzf --height 40%)'
 # Highlight current day
