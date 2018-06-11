@@ -7,8 +7,7 @@ function fish_right_prompt -d "Right side prompt message"
 
     set_color $dark_grey
 
-    # show_virtualenv_name
-	show_nodeenv_name
+	show_node_version
 	show_pyenv_name
     show_git_info
     echo -en (date +%H:%M:%S)
@@ -16,25 +15,24 @@ function fish_right_prompt -d "Right side prompt message"
     set_color normal
 end
 
-
-function show_pyenv_name -d "Display pyenv name of the current virtualenv"
-	set --local GLOBAL_NAME (pyenv global)
-	set --local PYENV_NAME (pyenv version-name)
-	if [ ! -z $PYENV_NAME ]
-		if [ $GLOBAL_NAME != $PYENV_NAME ]
-			echo -en "[ "$PYENV_NAME" ] "
-		end
-	end
+function show_pyenv_name -d "pyenv virtualenv"
+    set --local GLOBAL_NAME (pyenv global)
+    set --local VERSION_NAME (pyenv version-name)
+    if [ ! -z $VERSION_NAME ]
+        if [ $GLOBAL_NAME != $VERSION_NAME ]
+            echo -n "["$VERSION_NAME"] "
+        end
+    end
 end
 
-function show_nodeenv_name -d "Display nodenv name of the current node"
-	set --local GLOBAL_VERSION (nodenv global)
-	set --local NODE_VERSION (nodenv version-name)
-	if [ ! -z $NODE_VERSION ]
-		if [ $GLOBAL_VERSION != $NODE_VERSION ]
-			echo -en "[ Node: "$NODE_VERSION" ] "
-		end
-	end
+function show_node_version -d "Show node version"
+    set --local GLOBAL_NAME (nodenv global)
+    set --local VERSION_NAME (nodenv version-name)
+    if [ ! -z $VERSION_NAME ]
+        if [ $GLOBAL_NAME != $VERSION_NAME ]
+            echo -n "[Node: "$VERSION_NAME"] "
+        end
+    end
 end
 
 function show_git_info -d "Show git repository information"
