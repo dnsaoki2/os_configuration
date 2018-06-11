@@ -17,3 +17,15 @@ Thumbs.db
 
 # Pycharm
 .idea
+
+# pyenv
+# .python-version
+
+# vs code
+.vscode
+.node-version
+.python-version
+
+node_modules/
+
+.node-version

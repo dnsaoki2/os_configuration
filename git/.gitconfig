@@ -24,4 +24,8 @@
 	untracked = cyan
 [user]
 	name = Denis Aoki
-	email = dnsaoki2@gmail.com
+	email = dnsaoki@gmail.com
+[pull]
+	rebase = true
+[alias]
+	release = tag -a --cleanup=whitespace
